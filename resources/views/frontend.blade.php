@@ -52,7 +52,9 @@
     </style>
 </head>
 <body>
-    <h1>Latihan Routes</h1>
+    <h1>TUGAS PWEB</h1>
+    <br>
+    <p>Arya Wiraguna Dwiputra | 5026231083</p>
     <div class="link-container">
         <a href="bootstrap1">Bootstrap 1</a>
         <a href="bootstrap2">Bootstrap 2</a>
@@ -60,6 +62,7 @@
         <a href="learnjs2">Learn JS 2</a>
         <a href="linktree">Tugas Linktree</a>
         <a href="new">Page sewa Kamera</a>
+        <a href="https://aryawiragunadwiputra.github.io/">ETS</a>
     </div>
 </body>
 </html>
