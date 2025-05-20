@@ -53,8 +53,8 @@
 </head>
 <body>
     <h1>TUGAS PWEB</h1>
-    <br>
     <p>Arya Wiraguna Dwiputra | 5026231083</p>
+    <br>
     <div class="link-container">
         <a href="bootstrap1">Bootstrap 1</a>
         <a href="bootstrap2">Bootstrap 2</a>
