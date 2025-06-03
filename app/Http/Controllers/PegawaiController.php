@@ -6,21 +6,17 @@ use Illuminate\Http\Request;
 
 class PegawaiController extends Controller
 {
+    //
     public function index($nama){
-    	return $nama;
+        return $nama;
     }
 
     public function formulir(){
-
-    	return view('formulir');
-
+        return view('formulir');
     }
-
-     public function proses(Request $request){
-        $nama = $request->input('nama');
-     	$alamat = $request->input('alamat');
-        $NRP = $request->input('NRP');
-        return "NRP : ".$NRP."<br>Nama : ".$nama."<br> Alamat : ".$alamat . "<br> Aslinya request : " . $request;
+    public function proses(Request $request){
+            $nama = $request->input('nama');
+            $alamat = $request->input('alamat');
+            return "Nama : ".$nama."<br> Alamat : ".$alamat ."<br> Aslinyaa : ". $request;
     }
-
 }
