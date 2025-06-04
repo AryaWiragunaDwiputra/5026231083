@@ -10,7 +10,8 @@ class PegawaiDBController extends Controller
 	public function index()
 		{
 			// mengambil data dari table pegawai
-			$pegawai = DB::table('pegawai')->get();
+			//$pegawai = DB::table('pegawai')->get();
+            $pegawai = DB::table('pegawai')-> paginate(10);
 
 			// mengirim data pegawai ke view index
 			return view('index',['pegawai' => $pegawai]);
@@ -36,11 +37,24 @@ class PegawaiDBController extends Controller
 
     }
 
+    // public function proses(Request $request)
+    //     {
+    //     $this->validate($request,[
+    //        'nama' => 'required|min:5|max:20',
+    //        'pekerjaan' => 'required',
+    //        'usia' => 'required|numeric'
+    //     ]);
+
+    //     return view('proses',['data' => $request]);
+    //     }
+
     // method untuk edit data pegawai
-    public function edit($id)
+    public function edit($id) //ada primary key
     {
         // mengambil data pegawai berdasarkan id yang dipilih
-        $pegawai = DB::table('pegawai')->where('pegawai_id',$id)->get();
+        $pegawai = DB::table('pegawai')
+        ->where('pegawai_id',$id) //khusus operator =, kalau mau pakai selain itu harus sebutin operator di parameter kedua nya
+        ->get();
         // passing data pegawai yang didapat ke view edit.blade.php
         return view('edit',['pegawai' => $pegawai]);
 
@@ -66,5 +80,19 @@ class PegawaiDBController extends Controller
 
         // alihkan halaman ke halaman pegawai
         return redirect('/pegawai');
+    }
+    public function cari(Request $request)
+    {
+        // menangkap data pencarian
+        $cari = $request->cari;
+
+        // mengambil data dari table pegawai sesuai pencarian data
+        $pegawai = DB::table('pegawai')
+        ->where('pegawai_nama','like',"%".$cari."%")
+        ->paginate();
+
+            // mengirim data pegawai ke view index
+        return view('index',['pegawai' => $pegawai]);
+
     }
 }

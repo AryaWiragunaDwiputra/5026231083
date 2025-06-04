@@ -81,10 +81,11 @@ Route::get('/blog', [BlogController::class, 'home']);
 Route::get('/blog/tentang', [BlogController::class, 'tentang']);
 Route::get('/blog/kontak', [BlogController::class, 'kontak']);
 
-//route CRUD abase pegawai belajar_laravel
+//route CRUD dataabase pegawai belajar_laravel
 Route::get('/pegawai', [PegawaiDBCOntroller::class, 'index']);
 Route::get('/pegawai/tambah', [PegawaiDBCOntroller::class, 'tambah']);
 Route::post('/pegawai/store', [PegawaiDBCOntroller::class, 'store']);
 Route::get('/pegawai/edit/{id}', [PegawaiDBCOntroller::class, 'edit']);
 Route::post('/pegawai/update', [PegawaiDBCOntroller::class, 'update']);
 Route::get('/pegawai/hapus/{id}', [PegawaiDBCOntroller::class, 'hapus']);
+Route::get('/pegawai/cari', [PegawaiDBCOntroller::class, 'cari']);
