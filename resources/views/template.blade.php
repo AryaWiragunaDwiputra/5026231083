@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Arya Wiraguna Dwiputra : 502623108</title>
+    <title>502623108 - ARYA WIRAGUNA DWIPUTRA</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">

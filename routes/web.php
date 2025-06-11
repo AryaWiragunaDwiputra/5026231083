@@ -5,7 +5,8 @@ use App\Http\Controllers\Coba;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiDBController;
-use App\Http\Controllers\MinumanDBController; // Import MinumanDBController
+use App\Http\Controllers\MinumanDBController;
+use App\Http\Controllers\TrafficController;
 
 /*
 |--------------------------------------------------------------------------
@@ -91,7 +92,7 @@ Route::post('/pegawai/update', [PegawaiDBCOntroller::class, 'update']);
 Route::get('/pegawai/hapus/{id}', [PegawaiDBCOntroller::class, 'hapus']);
 Route::get('/pegawai/cari', [PegawaiDBCOntroller::class, 'cari']);
 
-// Rute CRUD data minuman belajar_laravel
+// Route CRUD data minuman belajar_laravel
 Route::get('/minuman', [MinumanDBController::class, 'index'])->name('minuman.index');
 Route::get('/minuman/tambah', [MinumanDBController::class, 'tambah'])->name('minuman.tambah');
 Route::post('/minuman/store', [MinumanDBController::class, 'store'])->name('minuman.store');
@@ -99,3 +100,6 @@ Route::get('/minuman/edit/{id}', [MinumanDBController::class, 'edit'])->name('mi
 Route::post('/minuman/update', [MinumanDBController::class, 'update'])->name('minuman.update');
 Route::get('/minuman/hapus/{id}', [MinumanDBController::class, 'hapus'])->name('minuman.hapus');
 Route::get('/minuman/cari', [MinumanDBController::class, 'cari'])->name('minuman.cari');
+
+// Route CRUD data pagecounter
+Route::get('/latihan2', [TrafficController::class, 'index']);
