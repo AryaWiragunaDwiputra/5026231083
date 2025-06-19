@@ -25,7 +25,7 @@
                     <a href="/keranjang/hapus/{{ $keranjang->ID }}" class="btn btn-danger">Batal</a>
                 </td>
             </tr>
-        @endforeachAdd commentMore actions
+        @endforeach
     </table>
 
     {{ $keranjangs->links() }}
