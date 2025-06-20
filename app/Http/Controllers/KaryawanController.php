@@ -9,7 +9,7 @@ class KaryawanController extends Controller
 {
     public function karyawan()
     {
-        $karyawan = DB::table('karyawan')->paginate(15);
+        $karyawan = DB::table('karyawan')->get();
         return view('karyawan', ['karyawan' => $karyawan]);
     }
 

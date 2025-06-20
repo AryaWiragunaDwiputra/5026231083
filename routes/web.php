@@ -97,13 +97,13 @@ Route::get('/pegawai/hapus/{id}', [PegawaiDBCOntroller::class, 'hapus']);
 Route::get('/pegawai/cari', [PegawaiDBCOntroller::class, 'cari']);
 
 // Route CRUD data minuman belajar_laravel
-Route::get('/minuman', [MinumanDBController::class, 'index'])->name('minuman.index');
-Route::get('/minuman/tambah', [MinumanDBController::class, 'tambah'])->name('minuman.tambah');
-Route::post('/minuman/store', [MinumanDBController::class, 'store'])->name('minuman.store');
-Route::get('/minuman/edit/{id}', [MinumanDBController::class, 'edit'])->name('minuman.edit');
-Route::post('/minuman/update', [MinumanDBController::class, 'update'])->name('minuman.update');
-Route::get('/minuman/hapus/{id}', [MinumanDBController::class, 'hapus'])->name('minuman.hapus');
-Route::get('/minuman/cari', [MinumanDBController::class, 'cari'])->name('minuman.cari');
+Route::get('/minuman', [MinumanDBController::class, 'index'])->name('/minuman');
+Route::get('/minuman/tambah', [MinumanDBController::class, 'tambah'])->name('/minuman/tambah');
+Route::post('/minuman/store', [MinumanDBController::class, 'store'])->name('/minuman/store');
+Route::get('/minuman/edit/{id}', [MinumanDBController::class, 'edit'])->name('/minuman/edit');
+Route::post('/minuman/update', [MinumanDBController::class, 'update'])->name('/minuman/update');
+Route::get('/minuman/hapus/{id}', [MinumanDBController::class, 'hapus'])->name('/minuman/hapus');
+Route::get('/minuman/cari', [MinumanDBController::class, 'cari'])->name('/minuman/cari');
 
 // Route CRUD data pagecounter
 Route::get('/latihan2', [TrafficController::class, 'index']);

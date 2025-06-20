@@ -2,7 +2,7 @@
 
 @section('content')
     <h3>Data Minuman</h3>
-    <a href="/minuman/tambah" class="btn btn-primary"> + Tambah Minumn Baru</a>
+    <a href="/minuman/tambah" class="btn btn-primary"> + Tambah Minuman Baru</a>
 
     <p>Cari Data Minuman :</p>
     <form action="/minuman/cari" method="GET">

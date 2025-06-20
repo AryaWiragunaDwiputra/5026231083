@@ -1,7 +1,9 @@
 @extends('template')
 @section('content')
     <h3>Keranjang Belanja</h3>
-    <br />
+    <a href="/keranjang/tambah/" class="btn btn-primary">Beli</a>
+    <br>
+    <br>
 
     <table class="table table-striped table-hover">
         <tr>
@@ -21,12 +23,9 @@
                 <td>{{ number_format($keranjang->Harga, 0, ',', '.') }}</td>
                 <td>{{ number_format($keranjang->Jumlah * $keranjang->Harga, 0, ',', '.') }}</td>
                 <td>
-                    <a href="/keranjang/tambah/{{ $keranjang->ID }}" class="btn btn-success">Beli</a>
                     <a href="/keranjang/hapus/{{ $keranjang->ID }}" class="btn btn-danger">Batal</a>
                 </td>
             </tr>
         @endforeach
     </table>
-
-    {{ $keranjangs->links() }}
 @endsection
